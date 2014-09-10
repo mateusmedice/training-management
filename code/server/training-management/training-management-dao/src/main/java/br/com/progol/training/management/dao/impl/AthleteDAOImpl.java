@@ -10,9 +10,9 @@ import br.com.progol.training.management.model.Athlete;
 @Repository
 public class AthleteDAOImpl extends DAOImpl<Athlete, String> implements AthleteDAO {
 
-	public Athlete findUserByCPF(String cpf) {
+	public Athlete findByCPF(String cpf) {
 
-		String jpql = "select u from User u ";
+		String jpql = "select u from Athlete u ";
 		jpql += " where u.cpf = :cpf";
 		
 		Query query = getEntityManager().createQuery(jpql);

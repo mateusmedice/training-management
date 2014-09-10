@@ -4,6 +4,6 @@ import br.com.progol.training.management.model.Athlete;
 
 public interface AthleteDAO extends DAO<Athlete, String> {
 
-	Athlete findUserByCPF(String cpf);
+	Athlete findByCPF(String cpf);
 	
 }

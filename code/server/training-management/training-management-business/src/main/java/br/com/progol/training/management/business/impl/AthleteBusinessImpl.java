@@ -11,15 +11,15 @@ import br.com.progol.training.management.model.Athlete;
 public class AthleteBusinessImpl implements AthleteBusiness {
 
 	@Autowired
-	private AthleteDAO userDAO;
+	private AthleteDAO athleteDAO;
 		
-	public Athlete findUserByCPF(String cpf) {
+	public Athlete findByCPF(String cpf) {
 
 		if (cpf == null || cpf.isEmpty()) {
 			throw new IllegalArgumentException("cpf can't be null.");
 		}
 		
-		return this.userDAO.findUserByCPF(cpf);
+		return this.athleteDAO.findByCPF(cpf);
 	}
 
 }

@@ -4,6 +4,6 @@ import br.com.progol.training.management.model.Athlete;
 
 public interface AthleteBusiness {
 
-	Athlete findUserByCPF(String cpf);
+	Athlete findByCPF(String cpf);
 	
 }

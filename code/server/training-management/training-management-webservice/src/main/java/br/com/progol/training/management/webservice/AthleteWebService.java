@@ -19,7 +19,7 @@ public class AthleteWebService extends WebServiceUtil {
 	@RequestMapping("/findByCpf")
 	public String find(@RequestParam(value="cpf", required=true) String cpf) {
 		
-		Athlete athlete = athleteBusiness.findUserByCPF(cpf);
+		Athlete athlete = athleteBusiness.findByCPF(cpf);
 		
 		return toJson(athlete);
 	}
