@@ -52,6 +52,6 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>training-management-web</finalName>
+		<finalName>tm-web</finalName>
 	</build>
 </project>
