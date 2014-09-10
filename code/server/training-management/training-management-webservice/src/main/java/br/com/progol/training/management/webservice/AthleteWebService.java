@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.progol.training.management.business.AthleteBusiness;
 import br.com.progol.training.management.model.Athlete;
-import br.com.progol.training.management.webservice.util.WebServiceUtil;
+import br.com.progol.training.management.util.JsonUtil;
 
 @RestController
 @RequestMapping("/athelte")
-public class AthleteWebService extends WebServiceUtil {
+public class AthleteWebService {
 	
 	@Autowired
 	private AthleteBusiness athleteBusiness;
@@ -21,13 +21,13 @@ public class AthleteWebService extends WebServiceUtil {
 		
 		Athlete athlete = athleteBusiness.findByCPF(cpf);
 		
-		return toJson(athlete);
+		return JsonUtil.toJson(athlete);
 	}
 	
 	@RequestMapping("/newTraining")
 	public String newTrainig(@RequestParam(value="cpf", required=true) String cpf) {
 		
-		return toJson("");
+		return JsonUtil.toJson("");
 	}
 
 }

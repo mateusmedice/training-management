@@ -1,8 +1,8 @@
-package br.com.progol.training.management.webservice.util;
+package br.com.progol.training.management.util;
 
 import com.google.gson.Gson;
 
-public class WebServiceUtil {
+public class JsonUtil {
 
 	public static String toJson(Object object) {
 		

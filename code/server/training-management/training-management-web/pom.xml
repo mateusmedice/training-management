@@ -22,6 +22,12 @@
 			<artifactId>training-management-business</artifactId>
 			<version>1.0</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>br.com.progol</groupId>
+			<artifactId>training-management-util</artifactId>
+			<version>1.0</version>
+		</dependency>
 
 		<dependency>
 			<groupId>br.com.progol</groupId>
