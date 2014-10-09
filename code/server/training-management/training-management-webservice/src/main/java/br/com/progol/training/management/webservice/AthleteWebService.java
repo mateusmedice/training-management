@@ -29,5 +29,11 @@ public class AthleteWebService {
 		
 		return JsonUtil.toJson("");
 	}
+	
+	@RequestMapping("/getAll")
+	public String getAll(@RequestParam(value="name", required=true) String name) {
+		
+		return JsonUtil.toJson(this.athleteBusiness.findByName(name));
+	}
 
 }

@@ -1,5 +1,7 @@
 package br.com.progol.training.management.business.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +22,11 @@ public class AthleteBusinessImpl implements AthleteBusiness {
 		}
 		
 		return this.athleteDAO.findByCPF(cpf);
+	}
+
+	public List<Athlete> findByName(String name) {
+		
+		return this.athleteDAO.findByName(name);
 	}
 
 }

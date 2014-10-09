@@ -14,9 +14,39 @@
 		
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+		<script type="text/javascript">
+		
+			function findAthlete() {
+				
+				var name = $('#name').val();
+				var data = 'name='
+						+ encodeURIComponent(name);
+				$.ajax({
+					url : "/tm-web/findAthlete",
+					data : data,
+					type : "GET",
+					success : function(response) {
+						alert('Sucesso' + response );
+					},
+					error : function(xhr, status, error) {
+						alert('Error' + xhr.responseText);
+					}
+				});
+				return false;
+				
+			}
+	
+		</script>
+
 	</head>
 	
 	<body>
-	
+		
+		<div>
+			<input type="text" name="name" id="name"><input type="button" onclick="findAthlete();" value="Find" >
+		</div>		
 	</body>
 </html>

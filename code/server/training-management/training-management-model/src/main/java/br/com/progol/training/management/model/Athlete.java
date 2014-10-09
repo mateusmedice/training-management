@@ -24,7 +24,7 @@ public class Athlete implements Serializable {
     @Field(name="_id")
 	private String _id;
 
-	@Basic
+	@Basic(optional=true)
 	private String name;
 
 	@Basic(optional=false)

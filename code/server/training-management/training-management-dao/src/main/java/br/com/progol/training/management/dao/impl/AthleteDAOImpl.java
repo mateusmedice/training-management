@@ -1,5 +1,7 @@
 package br.com.progol.training.management.dao.impl;
 
+import java.util.List;
+
 import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
@@ -20,6 +22,25 @@ public class AthleteDAOImpl extends DAOImpl<Athlete, String> implements AthleteD
 		query.setParameter("cpf", cpf);
 		
 		return (Athlete) query.getSingleResult();
+	}
+
+	public List<Athlete> findByName(String name) {
+
+		String jpql = "select a from Athlete a ";
+		
+		if (name != null && !name.isEmpty()) {
+			jpql += " where a.name like :name ";
+		}
+		
+		jpql += " order by a.name ";
+		
+		Query query = getEntityManager().createQuery(jpql);
+		
+		if (name != null && !name.isEmpty()) {
+			query.setParameter("name", "%" + name.toUpperCase() + "%");
+		}
+		
+		return query.getResultList();
 	}
 
 }
