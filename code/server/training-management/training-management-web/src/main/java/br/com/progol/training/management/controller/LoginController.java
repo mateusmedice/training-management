@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import br.com.progol.training.management.business.AthleteBusiness;
+import br.com.progol.training.management.business.PlanOwnerBusiness;
 import br.com.progol.training.management.model.Athlete;
+import br.com.progol.training.management.model.PlanOwner;
 import br.com.progol.training.management.util.JsonUtil;
 
 @Controller
@@ -20,14 +22,29 @@ public class LoginController {
 	@Autowired
 	private AthleteBusiness athleteBusiness;
 	
+	@Autowired
+	private PlanOwnerBusiness planOwnerBusiness;
+	
 	@RequestMapping(value="/doLogin", method=RequestMethod.POST)
 	public String loginPage(
 		@RequestParam(value="userName", required=true) String userName, 
 		@RequestParam(value="password", required=true) String password,
 		Model model) {
-				
-		if(userName == null || password == null) {
+
+		if ((userName == null || userName.isEmpty()) 
+				&& (password == null || password.isEmpty())) {
+
+			model.addAttribute("mensagem", "Usu‡rio e Senha s‹o obrigat—rios.");
 			return "login";
+		}
+		
+		PlanOwner planOwner = this.planOwnerBusiness.findBy(userName, password);
+		
+		if (planOwner != null) {
+
+			planOwner.getAthleteList();
+				
+			return "login";	
 		}
 		
 		return "home";

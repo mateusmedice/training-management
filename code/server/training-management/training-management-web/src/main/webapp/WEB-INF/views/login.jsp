@@ -23,6 +23,9 @@
 			<div class="row clearfix">
 				<div class="col-md-12 column">
 					<h3 class="text-left text-primary">Login</h3>
+					
+					<h3>${requestScope.mensagem}</h3>
+					
 					<form class="form-horizontal" role="form" method="post" action="doLogin/">
 						<div class="form-group">
 							 <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
