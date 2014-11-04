@@ -15,6 +15,7 @@ import br.com.progol.training.management.business.PlanOwnerBusiness;
 import br.com.progol.training.management.model.Athlete;
 import br.com.progol.training.management.model.PlanOwner;
 import br.com.progol.training.management.util.JsonUtil;
+import br.com.progol.training.management.util.PropertiesUtil;
 
 @Controller
 public class LoginController {
@@ -34,7 +35,7 @@ public class LoginController {
 		if ((userName == null || userName.isEmpty()) 
 				&& (password == null || password.isEmpty())) {
 
-			model.addAttribute("mensagem", "Usu‡rio e Senha s‹o obrigat—rios.");
+			model.addAttribute("mensagem", PropertiesUtil.getMessagesValue("msg.usuario.senha.obrigatorios"));
 			return "login";
 		}
 		

@@ -22,11 +22,15 @@
 		<div class="container">
 			<div class="row clearfix">
 				<div class="col-md-12 column">
-					<h3 class="text-left text-primary">Login</h3>
+					<h3 class="text-left text-primary">Training Management - Login</h3>
 					
-					<h3>${requestScope.mensagem}</h3>
+					<div align="center">
+						<h3><span class="label label-danger">${requestScope.mensagem}</span></h3>
+					</div>
 					
-					<form class="form-horizontal" role="form" method="post" action="doLogin/">
+					<br clear="all" />
+					
+					<form class="form-horizontal" role="form" method="post" action="doLogin.html">
 						<div class="form-group">
 							 <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
 							<div class="col-sm-10">
@@ -34,21 +38,14 @@
 							</div>
 						</div>
 						<div class="form-group">
-							 <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+							 <label for="inputPassword3" class="col-sm-2 control-label">Senha</label>
 							<div class="col-sm-10">
 								<input type="password" name="password" class="form-control" id="inputPassword3" />
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="col-sm-offset-2 col-sm-10">
-								<div class="checkbox">
-									 <label><input type="checkbox" /> Remember me</label>
-								</div>
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-sm-offset-2 col-sm-10">
-								 <button type="submit" class="btn btn-default">Sign in</button>
+								 <button type="submit" class="btn btn-default">Entrar</button>
 							</div>
 						</div>
 					</form>

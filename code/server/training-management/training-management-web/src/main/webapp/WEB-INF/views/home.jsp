@@ -21,10 +21,16 @@
 			function findAthlete() {
 				
 				var name = $('#name').val();
+				
+				if (!name) {
+					alert("Insira um nome para consulta!");
+					return;
+				}
+				
 				var data = 'name='
 						+ encodeURIComponent(name);
 				$.ajax({
-					url : "/tm-web/findAthlete",
+					url : "findAthlete.html",
 					data : data,
 					type : "GET",
 					success : function(response) {
@@ -76,11 +82,13 @@
 									</ul>
 								</li>
 							</ul>
-							<form class="navbar-form navbar-left" role="search">
+							<div class="navbar-form navbar-left" role="search" >
+								<label for="inputName" class="control-label">Nome</label>
 								<div class="form-group">
-									<input type="text" name="name" class="form-control" />
-								</div> <button type="submit" class="btn btn-default" onclick="findAthlete();" >Submit</button>
-							</form>
+									<input type="text" id="inputName" name="name" class="form-control" />
+								</div> 
+								<button type="submit" class="btn btn-default" onclick="findAthlete();" >Submit</button>
+							</div>
 						</div>
 					</nav>
 				</div>
