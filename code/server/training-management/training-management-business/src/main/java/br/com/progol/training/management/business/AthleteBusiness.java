@@ -9,5 +9,7 @@ public interface AthleteBusiness {
 	Athlete findByCPF(String cpf);
 
 	List<Athlete> findByName(String name);	
+	
+	List<Athlete> getAll();	
 
 }

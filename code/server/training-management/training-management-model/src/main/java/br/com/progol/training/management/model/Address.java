@@ -4,14 +4,23 @@ import java.io.Serializable;
 
 import javax.persistence.Basic;
 import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 import org.eclipse.persistence.nosql.annotations.DataFormatType;
+import org.eclipse.persistence.nosql.annotations.Field;
 import org.eclipse.persistence.nosql.annotations.NoSql;
 
-@Embeddable
+@Entity
 @NoSql(dataFormat=DataFormatType.MAPPED)
 public class Address implements Serializable {
 
+	@Id
+	@GeneratedValue
+    @Field(name="_id")
+	private String _id;
+	
     @Basic
 	private String street;
 
@@ -31,6 +40,14 @@ public class Address implements Serializable {
     	
     }
 
+	public String get_id() {
+		return _id;
+	}
+
+	public void set_id(String _id) {
+		this._id = _id;
+	}
+	
 	public String getStreet() {
 		return street;
 	}

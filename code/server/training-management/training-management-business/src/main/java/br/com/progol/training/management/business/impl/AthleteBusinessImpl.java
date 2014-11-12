@@ -29,4 +29,9 @@ public class AthleteBusinessImpl implements AthleteBusiness {
 		return this.athleteDAO.findByName(name);
 	}
 
+	public List<Athlete> getAll() {
+
+		return this.athleteDAO.getAll(Athlete.class);
+	}
+
 }

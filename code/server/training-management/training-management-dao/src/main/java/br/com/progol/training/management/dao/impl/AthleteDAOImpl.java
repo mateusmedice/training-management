@@ -21,7 +21,14 @@ public class AthleteDAOImpl extends DAOImpl<Athlete, String> implements AthleteD
 		
 		query.setParameter("cpf", cpf);
 		
-		return (Athlete) query.getSingleResult();
+		List resultList = query.getResultList();
+		
+		if (resultList != null && !resultList.isEmpty()) {
+			
+			return (Athlete) resultList.get(0);
+		}
+		
+		return null;
 	}
 
 	public List<Athlete> findByName(String name) {

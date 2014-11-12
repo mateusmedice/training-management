@@ -27,13 +27,15 @@ public class AthleteWebService {
 	@RequestMapping("/newTraining")
 	public String newTrainig(@RequestParam(value="cpf", required=true) String cpf) {
 		
+		// PlanOwner planOwner = new PlanOwner();
+		
 		return JsonUtil.toJson("");
 	}
 	
 	@RequestMapping("/getAll")
-	public String getAll(@RequestParam(value="name", required=true) String name) {
+	public String getAll() {
 		
-		return JsonUtil.toJson(this.athleteBusiness.findByName(name));
+		return JsonUtil.toJson(this.athleteBusiness.getAll());
 	}
 
 }
