@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.progol.training.management.business.ExerciseBusiness;
-import br.com.progol.training.management.model.Exercise;
+import br.com.cavy.training.management.business.ExerciseBusiness;
+import br.com.cavy.training.management.model.Exercise;
 
 @RestController
 @RequestMapping("/exercise")

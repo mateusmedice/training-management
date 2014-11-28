@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.progol.training.management.business.AthleteBusiness;
-import br.com.progol.training.management.model.Athlete;
-import br.com.progol.training.management.util.JsonUtil;
+import br.com.cavy.training.management.business.AthleteBusiness;
+import br.com.cavy.training.management.model.Athlete;
+import br.com.cavy.training.management.util.JsonUtil;
 
 @RestController
 @RequestMapping("/athelte")

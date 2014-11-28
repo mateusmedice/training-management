@@ -8,12 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Result;
+import br.com.cavy.training.management.business.AthleteBusiness;
+import br.com.cavy.training.management.business.PlanOwnerBusiness;
+import br.com.cavy.training.management.model.Athlete;
+import br.com.cavy.training.management.model.PlanOwner;
+import br.com.cavy.training.management.util.JsonUtil;
 import br.com.cavy.training.management.util.PropertiesUtil;
-import br.com.progol.training.management.business.AthleteBusiness;
-import br.com.progol.training.management.business.PlanOwnerBusiness;
-import br.com.progol.training.management.model.Athlete;
-import br.com.progol.training.management.model.PlanOwner;
-import br.com.progol.training.management.util.JsonUtil;
 
 @Controller
 public class LoginController implements Serializable {

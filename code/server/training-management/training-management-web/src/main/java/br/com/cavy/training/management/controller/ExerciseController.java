@@ -8,7 +8,7 @@ import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Result;
-import br.com.progol.training.management.business.ExerciseBusiness;
+import br.com.cavy.training.management.business.ExerciseBusiness;
 
 @Controller
 public class ExerciseController implements Serializable {

@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.progol.training.management.business.EmailSenderBusiness;
-import br.com.progol.training.management.smtp.model.Email;
+import br.com.cavy.training.management.business.EmailSenderBusiness;
+import br.com.cavy.training.management.smtp.model.Email;
 
 @RestController
 @RequestMapping("/email")
