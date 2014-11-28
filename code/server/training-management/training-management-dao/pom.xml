@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>br.com.progol</groupId>
+		<groupId>br.com.cavy</groupId>
 		<artifactId>training-management</artifactId>
 		<version>1.0</version>
 	</parent>
@@ -12,13 +12,18 @@
 	<artifactId>training-management-dao</artifactId>
 
 	<dependencies>
-	
+
 		<dependency>
-			<groupId>br.com.progol</groupId>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>br.com.cavy</groupId>
 			<artifactId>training-management-model</artifactId>
 			<version>1.0</version>
 		</dependency>
-	
+
 		<!-- Spring dependencies -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -34,6 +39,12 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 		</dependency>
+		
+		<dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <scope>test</scope>
+        </dependency>
 
 		<dependency>
 			<groupId>org.eclipse.persistence</groupId>

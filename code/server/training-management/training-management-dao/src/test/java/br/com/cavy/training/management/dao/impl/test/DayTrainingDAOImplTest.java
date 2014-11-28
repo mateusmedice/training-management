@@ -1,14 +1,14 @@
-package br.com.progol.training.management.dao.impl.test;
+package br.com.cavy.training.management.dao.impl.test;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import br.com.progol.training.management.dao.DayTrainingDAO;
-import br.com.progol.training.management.dao.ExerciseDAO;
-import br.com.progol.training.management.model.DayTraining;
-import br.com.progol.training.management.model.Days;
-import br.com.progol.training.management.model.TrainingExercise;
+import br.com.cavy.training.management.dao.DayTrainingDAO;
+import br.com.cavy.training.management.dao.ExerciseDAO;
+import br.com.cavy.training.management.model.DayTraining;
+import br.com.cavy.training.management.model.Days;
+import br.com.cavy.training.management.model.TrainingExercise;
 
 public class DayTrainingDAOImplTest extends TestUtil {
 

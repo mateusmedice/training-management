@@ -5,12 +5,12 @@
     
     <persistence-unit name="TrainingManagementPU" transaction-type="RESOURCE_LOCAL">
         
-        <class>br.com.progol.training.management.model.Address</class>
-        <class>br.com.progol.training.management.model.Athlete</class>
-        <class>br.com.progol.training.management.model.DayTraining</class>
-        <class>br.com.progol.training.management.model.Exercise</class>
-		<class>br.com.progol.training.management.model.Training</class>
-		<class>br.com.progol.training.management.model.PlanOwner</class>
+        <class>br.com.cavy.training.management.model.Address</class>
+        <class>br.com.cavy.training.management.model.Athlete</class>
+        <class>br.com.cavy.training.management.model.DayTraining</class>
+        <class>br.com.cavy.training.management.model.Exercise</class>
+		<class>br.com.cavy.training.management.model.Training</class>
+		<class>br.com.cavy.training.management.model.PlanOwner</class>
         
         <properties>
             <property name="eclipselink.target-database" value="org.eclipse.persistence.nosql.adapters.mongo.MongoPlatform"/>

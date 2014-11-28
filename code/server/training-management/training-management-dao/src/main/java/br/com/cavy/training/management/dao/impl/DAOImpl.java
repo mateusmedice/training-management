@@ -1,4 +1,4 @@
-package br.com.progol.training.management.dao.impl;
+package br.com.cavy.training.management.dao.impl;
 
 import java.io.Serializable;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 
-import br.com.progol.training.management.dao.DAO;
+import br.com.cavy.training.management.dao.DAO;
 
 public class DAOImpl <T, PK extends Serializable> implements DAO<T, PK> {
 

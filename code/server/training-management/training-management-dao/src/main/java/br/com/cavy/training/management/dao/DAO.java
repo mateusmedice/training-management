@@ -1,4 +1,4 @@
-package br.com.progol.training.management.dao;
+package br.com.cavy.training.management.dao;
 
 import java.util.List;
 

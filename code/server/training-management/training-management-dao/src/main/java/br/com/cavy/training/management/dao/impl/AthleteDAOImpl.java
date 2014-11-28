@@ -1,4 +1,4 @@
-package br.com.progol.training.management.dao.impl;
+package br.com.cavy.training.management.dao.impl;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
 
-import br.com.progol.training.management.dao.AthleteDAO;
-import br.com.progol.training.management.model.Athlete;
+import br.com.cavy.training.management.dao.AthleteDAO;
+import br.com.cavy.training.management.model.Athlete;
 
 @Repository
 public class AthleteDAOImpl extends DAOImpl<Athlete, String> implements AthleteDAO {

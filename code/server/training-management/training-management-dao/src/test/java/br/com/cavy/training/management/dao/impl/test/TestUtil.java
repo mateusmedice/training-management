@@ -1,4 +1,4 @@
-package br.com.progol.training.management.dao.impl.test;
+package br.com.cavy.training.management.dao.impl.test;
 
 import org.junit.After;
 import org.junit.runner.RunWith;
