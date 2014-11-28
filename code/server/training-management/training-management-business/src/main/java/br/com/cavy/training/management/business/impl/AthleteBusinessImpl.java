@@ -1,13 +1,13 @@
-package br.com.progol.training.management.business.impl;
+package br.com.cavy.training.management.business.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.progol.training.management.business.AthleteBusiness;
-import br.com.progol.training.management.dao.AthleteDAO;
-import br.com.progol.training.management.model.Athlete;
+import br.com.cavy.training.management.business.AthleteBusiness;
+import br.com.cavy.training.management.dao.AthleteDAO;
+import br.com.cavy.training.management.model.Athlete;
 
 @Service
 public class AthleteBusinessImpl implements AthleteBusiness {

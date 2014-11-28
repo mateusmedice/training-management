@@ -1,10 +1,10 @@
-package br.com.progol.training.management.business.impl;
+package br.com.cavy.training.management.business.impl;
 
 import org.springframework.stereotype.Service;
 
-import br.com.progol.training.management.business.EmailSenderBusiness;
-import br.com.progol.training.management.business.smtp.SMTPMailSender;
-import br.com.progol.training.management.smtp.model.Email;
+import br.com.cavy.training.management.business.EmailSenderBusiness;
+import br.com.cavy.training.management.business.smtp.SMTPMailSender;
+import br.com.cavy.training.management.smtp.model.Email;
 
 @Service
 public class EmailSenderBusinessImpl implements EmailSenderBusiness {

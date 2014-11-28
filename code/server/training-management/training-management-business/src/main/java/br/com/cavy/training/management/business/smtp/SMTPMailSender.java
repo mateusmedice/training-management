@@ -1,4 +1,4 @@
-package br.com.progol.training.management.business.smtp;
+package br.com.cavy.training.management.business.smtp;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -17,7 +17,7 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-import br.com.progol.training.management.smtp.util.PropertisUtil;
+import br.com.cavy.training.management.smtp.util.PropertisUtil;
 
 public class SMTPMailSender {
 	
@@ -133,7 +133,7 @@ public class SMTPMailSender {
 		props.put("mail.smtp.port", this.port);
 		// props.put("mail.from", from);
 		
-		// FIXME: Configurações para SSL
+		// FIXME: ConfiguraÔøΩÔøΩes para SSL
 		// props.put("mail.smtp.socketFactory.port", this.port);
 		// props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
 		// props.put("mail.smtp.socketFactory.fallback", "true");
@@ -160,7 +160,7 @@ public class SMTPMailSender {
 	}
 
 	/**
-	 * Envia as mensagens que não foram enviadas.
+	 * Envia as mensagens que nÔøΩo foram enviadas.
 	 */
 	private void tryAgain() {
 		
@@ -203,7 +203,7 @@ public class SMTPMailSender {
 	}
 	
 	/**
-	 * Carrega as configurações de acesso ao servidor SMTP
+	 * Carrega as configuraÔøΩÔøΩes de acesso ao servidor SMTP
 	 */
 	private void loadConfig() {
 		

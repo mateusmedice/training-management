@@ -1,11 +1,11 @@
-package br.com.progol.training.management.business.impl;
+package br.com.cavy.training.management.business.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.progol.training.management.business.ExerciseBusiness;
-import br.com.progol.training.management.dao.ExerciseDAO;
-import br.com.progol.training.management.model.Exercise;
+import br.com.cavy.training.management.business.ExerciseBusiness;
+import br.com.cavy.training.management.dao.ExerciseDAO;
+import br.com.cavy.training.management.model.Exercise;
 
 @Service
 public class ExerciseBusinessImpl implements ExerciseBusiness {

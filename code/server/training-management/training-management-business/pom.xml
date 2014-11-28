@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>br.com.progol</groupId>
+		<groupId>br.com.cavy</groupId>
 		<artifactId>training-management</artifactId>
 		<version>1.0</version>
 	</parent>
@@ -14,19 +14,19 @@
 	<dependencies>
 
 		<dependency>
-			<groupId>br.com.progol</groupId>
+			<groupId>br.com.cavy</groupId>
 			<artifactId>training-management-dao</artifactId>
 			<version>1.0</version>
 		</dependency>
 
 		<dependency>
-			<groupId>br.com.progol</groupId>
+			<groupId>br.com.cavy</groupId>
 			<artifactId>training-management-model</artifactId>
 			<version>1.0</version>
 		</dependency>
 
 		<dependency>
-			<groupId>br.com.progol</groupId>
+			<groupId>br.com.cavy</groupId>
 			<artifactId>training-management-util</artifactId>
 			<version>1.0</version>
 		</dependency>
