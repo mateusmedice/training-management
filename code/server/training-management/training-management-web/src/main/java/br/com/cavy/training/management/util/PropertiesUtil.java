@@ -1,4 +1,4 @@
-package br.com.progol.training.management.util;
+package br.com.cavy.training.management.util;
 
 import java.util.Properties;
 

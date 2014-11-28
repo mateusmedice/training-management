@@ -1,24 +1,22 @@
-package br.com.progol.training.management.controller;
+package br.com.cavy.training.management.controller;
 
+import java.io.Serializable;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
+import br.com.caelum.vraptor.Controller;
+import br.com.caelum.vraptor.Get;
+import br.com.caelum.vraptor.Result;
+import br.com.cavy.training.management.util.PropertiesUtil;
 import br.com.progol.training.management.business.AthleteBusiness;
 import br.com.progol.training.management.business.PlanOwnerBusiness;
 import br.com.progol.training.management.model.Athlete;
 import br.com.progol.training.management.model.PlanOwner;
 import br.com.progol.training.management.util.JsonUtil;
-import br.com.progol.training.management.util.PropertiesUtil;
 
 @Controller
-public class LoginController {
+public class LoginController implements Serializable {
 
 	@Autowired
 	private AthleteBusiness athleteBusiness;
@@ -26,16 +24,16 @@ public class LoginController {
 	@Autowired
 	private PlanOwnerBusiness planOwnerBusiness;
 	
-	@RequestMapping(value="/doLogin", method=RequestMethod.POST)
-	public String loginPage(
-		@RequestParam(value="userName", required=true) String userName, 
-		@RequestParam(value="password", required=true) String password,
-		Model model) {
+	@Autowired
+	private Result result;
+	
+	@Get("/login")
+	public String loginPage(String userName, String password) {
 
 		if ((userName == null || userName.isEmpty()) 
 				&& (password == null || password.isEmpty())) {
 
-			model.addAttribute("mensagem", PropertiesUtil.getMessagesValue("msg.usuario.senha.obrigatorios"));
+			result.include("mensagem", PropertiesUtil.getMessagesValue("msg.usuario.senha.obrigatorios"));
 			return "login";
 		}
 		
@@ -57,9 +55,8 @@ public class LoginController {
 	 * @param cpf
 	 * @return
 	 */
-	@RequestMapping(value="/findAthlete", method=RequestMethod.GET)
-	public @ResponseBody String findAthleteByName(
-		@RequestParam(value="name", required=true) String name) {
+	@Get
+	public String findAthleteByName(String name) {
 		
 		List<Athlete> athleteList = this.athleteBusiness.findByName(name);
 		
