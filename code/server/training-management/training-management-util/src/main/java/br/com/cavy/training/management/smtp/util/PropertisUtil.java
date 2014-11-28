@@ -1,4 +1,4 @@
-package br.com.progol.training.management.smtp.util;
+package br.com.cavy.training.management.smtp.util;
 
 import java.util.Properties;
 
