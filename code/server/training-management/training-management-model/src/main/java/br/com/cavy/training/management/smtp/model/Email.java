@@ -1,4 +1,4 @@
-package br.com.progol.training.management.smtp.model;
+package br.com.cavy.training.management.smtp.model;
 
 public class Email {
 

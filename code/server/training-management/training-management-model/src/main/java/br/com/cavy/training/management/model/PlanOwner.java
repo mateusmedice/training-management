@@ -1,4 +1,4 @@
-package br.com.progol.training.management.model;
+package br.com.cavy.training.management.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
