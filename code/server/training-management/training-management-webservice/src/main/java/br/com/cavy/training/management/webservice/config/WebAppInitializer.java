@@ -1,4 +1,4 @@
-package br.com.progol.training.management.webservice.config;
+package br.com.cavy.training.management.webservice.config;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
