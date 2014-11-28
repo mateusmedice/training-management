@@ -4,7 +4,7 @@ package br.com.progol.training.management.model;
 public enum Days {
 
 	MONDAY("Segunda"), 
-	TUESDAY("Terça"), 
+	TUESDAY("TerÃ§a"), 
 	WEDNESDAY("Quarta"), 
 	THURSDAY("Quinta"), 
 	FRIDAY("Sexta");

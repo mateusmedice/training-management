@@ -20,11 +20,18 @@
 	<properties>
 		<spring.version>4.0.6.RELEASE</spring.version>
 		<eclipse.link.version>2.4.2</eclipse.link.version>
+		<junit.version>4.11</junit.version>
 	</properties>
 
 	<dependencyManagement>
 
 		<dependencies>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
 
 			<!-- Spring dependencies -->
 			<dependency>
@@ -43,6 +50,13 @@
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-webmvc</artifactId>
 				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+				<version>${spring.version}</version>
+				<scope>test</scope>
 			</dependency>
 
 			<dependency>

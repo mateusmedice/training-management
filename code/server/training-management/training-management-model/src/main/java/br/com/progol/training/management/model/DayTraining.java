@@ -27,7 +27,7 @@ public class DayTraining implements Serializable {
 	private String day;
 	
 	@ElementCollection
-	private List<Exercise> exercise = new ArrayList<Exercise>();
+	private List<TrainingExercise> trainingExercise = new ArrayList<TrainingExercise>();
 	
 	public DayTraining() {
 		
@@ -49,12 +49,12 @@ public class DayTraining implements Serializable {
 		this.day = day;
 	}
 
-	public List<Exercise> getExercise() {
-		return exercise;
+	public List<TrainingExercise> getTrainingExercise() {
+		return trainingExercise;
 	}
 
-	public void setExercise(List<Exercise> exercise) {
-		this.exercise = exercise;
+	public void setTrainingExercise(List<TrainingExercise> trainingExercise) {
+		this.trainingExercise = trainingExercise;
 	}
 	
 }

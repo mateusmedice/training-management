@@ -25,7 +25,9 @@
 	</welcome-file-list>
 	
 	<listener>
+		<!-- Spring MVC -->
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+		<!-- <listener-class>org.jboss.weld.environment.servlet.Listener</listener-class> -->
 	</listener>
 
 </web-app>

@@ -26,12 +26,6 @@ public class Exercise implements Serializable {
 
 	@Basic
 	private String exercise;
-
-	@Basic
-	private Integer series;
-
-	@Basic
-	private Integer repetition;
 	
 	public Exercise() {
 		
@@ -59,22 +53,6 @@ public class Exercise implements Serializable {
 
 	public void setExercise(String exercise) {
 		this.exercise = exercise;
-	}
-
-	public Integer getSeries() {
-		return series;
-	}
-
-	public void setSeries(Integer series) {
-		this.series = series;
-	}
-
-	public Integer getRepetition() {
-		return repetition;
-	}
-
-	public void setRepetition(Integer repetition) {
-		this.repetition = repetition;
 	}
 	
 }
