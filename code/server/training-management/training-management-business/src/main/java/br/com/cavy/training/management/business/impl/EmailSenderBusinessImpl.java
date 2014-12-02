@@ -8,7 +8,7 @@ import br.com.cavy.training.management.smtp.model.Email;
 
 @Service
 public class EmailSenderBusinessImpl implements EmailSenderBusiness {
-
+	
 	public String sendMail(Email email) {
 		
 		SMTPMailSender sender = new SMTPMailSender();

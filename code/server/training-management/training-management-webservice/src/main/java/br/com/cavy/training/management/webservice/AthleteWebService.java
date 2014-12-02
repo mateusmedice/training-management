@@ -1,40 +1,36 @@
 package br.com.cavy.training.management.webservice;
 
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
 import br.com.cavy.training.management.business.AthleteBusiness;
 import br.com.cavy.training.management.model.Athlete;
 import br.com.cavy.training.management.util.JsonUtil;
 
-@RestController
-@RequestMapping("/athelte")
+@Path("/athelte")
 public class AthleteWebService {
-	
+
 	@Autowired
 	private AthleteBusiness athleteBusiness;
 
-	@RequestMapping("/findByCpf")
-	public String find(@RequestParam(value="cpf", required=true) String cpf) {
-		
-		Athlete athlete = athleteBusiness.findByCPF(cpf);
-		
+	@GET
+	@Path("/findByCpf/{cpf}")
+	@Produces("application/json")
+	public String find(@PathParam("cpf") String cpf) {
+
+		Athlete athlete = this.athleteBusiness.findByCPF(cpf);
+
 		return JsonUtil.toJson(athlete);
 	}
-	
-	@RequestMapping("/newTraining")
-	public String newTrainig(@RequestParam(value="cpf", required=true) String cpf) {
-		
-		// PlanOwner planOwner = new PlanOwner();
-		
-		return JsonUtil.toJson("");
-	}
-	
-	@RequestMapping("/getAll")
+
+	@GET
+	@Path("/all")
 	public String getAll() {
-		
+
 		return JsonUtil.toJson(this.athleteBusiness.getAll());
 	}
 

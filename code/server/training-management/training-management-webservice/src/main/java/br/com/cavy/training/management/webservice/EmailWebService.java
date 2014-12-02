@@ -1,24 +1,24 @@
 package br.com.cavy.training.management.webservice;
 
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
 import br.com.cavy.training.management.business.EmailSenderBusiness;
 import br.com.cavy.training.management.smtp.model.Email;
 
-@RestController
-@RequestMapping("/email")
+@Path("/email")
 public class EmailWebService {
 
 	@Autowired
 	private EmailSenderBusiness emailSenderBusiness;
 
-	@RequestMapping("/send")
-	public String send(@RequestParam(value="cpf", required=true) Email email) {
+	@POST
+	@Path("/send")
+	public void send(Email email) {
 		
-		return emailSenderBusiness.sendMail(email);
+		this.emailSenderBusiness.sendMail(email);
 	}
 	
 }

@@ -23,8 +23,6 @@
 			<artifactId>org.eclipse.persistence.nosql</artifactId>
 		</dependency>
 	
-	
-	
 	</dependencies>
 
 </project>

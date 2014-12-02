@@ -9,8 +9,9 @@
         <class>br.com.cavy.training.management.model.Athlete</class>
         <class>br.com.cavy.training.management.model.DayTraining</class>
         <class>br.com.cavy.training.management.model.Exercise</class>
-		<class>br.com.cavy.training.management.model.Training</class>
 		<class>br.com.cavy.training.management.model.PlanOwner</class>
+		<class>br.com.cavy.training.management.model.Training</class>
+		<class>br.com.cavy.training.management.model.TrainingExercise</class>
         
         <properties>
             <property name="eclipselink.target-database" value="org.eclipse.persistence.nosql.adapters.mongo.MongoPlatform"/>
@@ -18,7 +19,7 @@
             <property name="eclipselink.nosql.property.mongo.port" value="27017"/>
             <property name="eclipselink.nosql.property.mongo.host" value="localhost"/>
             <property name="eclipselink.nosql.property.mongo.db" value="training-management"/>
-            <property name="eclipselink.logging.level" value="OFF"/>
+            <property name="eclipselink.logging.level" value="ON"/>
         </properties>
         
     </persistence-unit>

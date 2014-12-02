@@ -9,7 +9,7 @@
 
 	<body>
 		
-		<jsp:include page="menu.jsp" />
+		<jsp:include page="common/menu.jsp" />
 
 		<div class="container">
 			<div class="row clearfix">
