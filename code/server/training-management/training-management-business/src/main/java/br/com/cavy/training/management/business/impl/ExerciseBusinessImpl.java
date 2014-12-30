@@ -6,14 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.cavy.training.management.business.ExerciseBusiness;
-import br.com.cavy.training.management.dao.ExerciseDAO;
+import br.com.cavy.training.management.dao.ExerciseRepository;
 import br.com.cavy.training.management.model.Exercise;
 
 @Service
 public class ExerciseBusinessImpl implements ExerciseBusiness {
 
 	@Autowired
-	private ExerciseDAO exerciseDAO;
+	private ExerciseRepository exerciseDAO;
 
 	public void save(Exercise exercise) {
 

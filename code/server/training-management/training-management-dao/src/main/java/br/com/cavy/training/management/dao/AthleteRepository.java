@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import br.com.cavy.training.management.model.Athlete;
 
 @Repository
-public interface AthleteDAO extends MongoRepository<Athlete, String> {
+public interface AthleteRepository extends MongoRepository<Athlete, String> {
 	
 }

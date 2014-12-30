@@ -6,14 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.cavy.training.management.business.AthleteBusiness;
-import br.com.cavy.training.management.dao.AthleteDAO;
+import br.com.cavy.training.management.dao.AthleteRepository;
 import br.com.cavy.training.management.model.Athlete;
 
 @Service
 public class AthleteBusinessImpl implements AthleteBusiness {
 
 	@Autowired
-	private AthleteDAO athleteDAO;
+	private AthleteRepository athleteDAO;
 		
 	public Athlete findByCPF(String cpf) {
 

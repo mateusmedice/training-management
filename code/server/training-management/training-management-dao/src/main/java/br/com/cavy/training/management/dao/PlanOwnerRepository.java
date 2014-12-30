@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import br.com.cavy.training.management.model.PlanOwner;
 
 @Repository
-public interface PlanOwnerDAO extends MongoRepository<PlanOwner, String> {
+public interface PlanOwnerRepository extends MongoRepository<PlanOwner, String> {
 	
 }
