@@ -1,61 +1,35 @@
 package br.com.cavy.training.management.model;
 
-import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.Temporal;
+public class Athlete {
 
-import org.eclipse.persistence.nosql.annotations.DataFormatType;
-import org.eclipse.persistence.nosql.annotations.Field;
-import org.eclipse.persistence.nosql.annotations.NoSql;
+	private String id;
 
-@Entity
-@NoSql(dataFormat=DataFormatType.MAPPED)
-public class Athlete implements Serializable {
-
-	@Id
-	@GeneratedValue
-    @Field(name="_id")
-	private String _id;
-
-	@Basic(optional=true)
 	private String name;
 
-	@Basic(optional=false)
 	private String cpf;
 
-	@Basic
 	private String rg;
-
-    @Basic
-    @Temporal(javax.persistence.TemporalType.DATE)
+	
 	private Date birthDate;
     
-    @Basic
     private Boolean isTeacher;
     
-    @ManyToOne(fetch=FetchType.LAZY)
     private Address address = new Address();
     
-    @ManyToOne(fetch=FetchType.LAZY)
 	private Training training = new Training();
 	
 	public Athlete() {
 		
 	}
 
-	public String get_id() {
-		return _id;
+	public String getId() {
+		return id;
 	}
 
-	public void set_id(String _id) {
-		this._id = _id;
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getName() {

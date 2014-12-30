@@ -21,17 +21,17 @@ public class AthleteBusinessImpl implements AthleteBusiness {
 			throw new IllegalArgumentException("cpf can't be null.");
 		}
 		
-		return this.athleteDAO.findByCPF(cpf);
+		return null;
 	}
 
 	public List<Athlete> findByName(String name) {
 		
-		return this.athleteDAO.findByName(name);
+		return null;
 	}
 
 	public List<Athlete> getAll() {
 
-		return this.athleteDAO.getAll(Athlete.class);
+		return this.athleteDAO.findAll();
 	}
 
 }

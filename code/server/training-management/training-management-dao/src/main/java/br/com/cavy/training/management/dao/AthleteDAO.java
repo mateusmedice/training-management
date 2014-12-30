@@ -1,13 +1,11 @@
 package br.com.cavy.training.management.dao;
 
-import java.util.List;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
 
 import br.com.cavy.training.management.model.Athlete;
 
-public interface AthleteDAO extends DAO<Athlete, String> {
-
-	Athlete findByCPF(String cpf);
-	
-	List<Athlete> findByName(String name);
+@Repository
+public interface AthleteDAO extends MongoRepository<Athlete, String> {
 	
 }

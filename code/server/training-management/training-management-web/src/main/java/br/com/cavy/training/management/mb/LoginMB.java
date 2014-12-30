@@ -1,5 +1,6 @@
-package br.com.cavy.training.management.controller;
+package br.com.cavy.training.management.mb;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.faces.bean.ManagedBean;
@@ -13,9 +14,11 @@ import br.com.cavy.training.management.model.Athlete;
 import br.com.cavy.training.management.model.PlanOwner;
 import br.com.cavy.training.management.util.JsonUtil;
 
-@ManagedBean
+@ManagedBean(name="loginMB")
 @RequestScoped
-public class LoginController {
+public class LoginMB implements Serializable {
+
+	private static final long serialVersionUID = 4488828851798122189L;
 
 	@Autowired
 	private AthleteBusiness athleteBusiness;
@@ -23,14 +26,10 @@ public class LoginController {
 	@Autowired
 	private PlanOwnerBusiness planOwnerBusiness;
 	
-	public String loginPage(String userName, String password) {
+	public String loginPage() {
 
-		if ((userName == null || userName.isEmpty()) 
-				&& (password == null || password.isEmpty())) {
-
-			// result.include("mensagem", PropertiesUtil.getMessagesValue("msg.usuario.senha.obrigatorios"));
-			return "login";
-		}
+		String userName = "";
+		String password = "";
 		
 		PlanOwner planOwner = this.planOwnerBusiness.findBy(userName, password);
 		

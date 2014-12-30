@@ -1,6 +1,5 @@
 package br.com.cavy.training.management.model;
 
-
 public enum Days {
 
 	MONDAY("Segunda"), 

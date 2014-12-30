@@ -1,5 +1,7 @@
 package br.com.cavy.training.management.business.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +21,12 @@ public class ExerciseBusinessImpl implements ExerciseBusiness {
 			throw new IllegalArgumentException("");
 		}
 		
-		this.exerciseDAO.merge(exercise);
+		this.exerciseDAO.save(exercise);
+	}
+	
+	public List<Exercise> getAll() {
+		
+		return this.exerciseDAO.findAll();
 	}
 	
 }

@@ -1,29 +1,14 @@
 package br.com.cavy.training.management.model;
 
-import java.io.Serializable;
+import org.springframework.data.annotation.Id;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
-import org.eclipse.persistence.nosql.annotations.DataFormatType;
-import org.eclipse.persistence.nosql.annotations.Field;
-import org.eclipse.persistence.nosql.annotations.NoSql;
-
-@Entity
-@NoSql(dataFormat=DataFormatType.MAPPED)
-public class TrainingExercise implements Serializable {
+public class TrainingExercise {
 
 	@Id
-	@GeneratedValue
-    @Field(name="_id")
 	private String _id;
 	
-	@Basic
 	private Integer series;
 
-	@Basic
 	private Integer repetition;
 	
 	private Exercise exercise;
@@ -46,5 +31,14 @@ public class TrainingExercise implements Serializable {
 
 	public void setRepetition(Integer repetition) {
 		this.repetition = repetition;
-	}	
+	}
+
+	public Exercise getExercise() {
+		return exercise;
+	}
+
+	public void setExercise(Exercise exercise) {
+		this.exercise = exercise;
+	}
+	
 }

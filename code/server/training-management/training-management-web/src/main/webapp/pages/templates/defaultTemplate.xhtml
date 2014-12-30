@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+	<h:head>
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+		
+		<title>
+			Teste
+		</title>
+		
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="-1" />
+
+		<ui:insert name="head" />
+	</h:head>
+	
+	<h:body>
+			
+		<!-- include cabecalho -->
+		<ui:include src="/pages/common/loading.xhtml" />
+		
+		<div id="geral" > 
+			
+			<table>		
+					
+				<tr>		
+					<td>	
+						<div > 
+							<!-- include cabecalho -->
+							<ui:include src="/pages/common/header.xhtml" />
+						</div>
+					</td>
+				</tr>
+				<tr>		
+					<td>	
+						<div> 
+							<!-- include menu -->
+							<ui:include src="/pages/common/menu.xhtml" />
+						</div>
+					</td>
+				</tr>
+				
+				<tr>		
+					<td>	
+						<!-- include messages -->
+						<ui:include src="/pages/common/messageBox.xhtml" />
+					</td>
+				</tr>
+				
+				<tr>		
+					<td>	
+						<div> 
+							<!-- include corpo -->
+							<ui:insert name="main" />
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div>
+							<ui:include src="/pages/common/footer.xhtml"></ui:include>
+						</div>
+					</td>
+				</tr>
+					
+			</table>
+		</div>
+		 
+	</h:body>
+</html>

@@ -15,7 +15,7 @@ public class PlanOwnerBusinessImpl implements PlanOwnerBusiness {
 	
 	public PlanOwner findBy(String email, String password) {
 
-		return this.planOwnerDAO.findBy(email, password);
+		return null;
 	}
 
 }

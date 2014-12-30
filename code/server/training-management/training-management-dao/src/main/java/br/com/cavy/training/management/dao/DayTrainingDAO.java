@@ -1,8 +1,11 @@
 package br.com.cavy.training.management.dao;
 
-import br.com.cavy.training.management.dao.DAO;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
+
 import br.com.cavy.training.management.model.DayTraining;
 
-public interface DayTrainingDAO extends DAO<DayTraining, String> {
+@Repository
+public interface DayTrainingDAO extends MongoRepository<DayTraining, String> {
 
 }
