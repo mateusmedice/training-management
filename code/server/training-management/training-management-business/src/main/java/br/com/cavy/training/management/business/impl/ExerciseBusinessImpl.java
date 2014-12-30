@@ -13,7 +13,7 @@ import br.com.cavy.training.management.model.Exercise;
 public class ExerciseBusinessImpl implements ExerciseBusiness {
 
 	@Autowired
-	private ExerciseRepository exerciseDAO;
+	private ExerciseRepository exerciseRepository;
 
 	public void save(Exercise exercise) {
 
@@ -21,12 +21,12 @@ public class ExerciseBusinessImpl implements ExerciseBusiness {
 			throw new IllegalArgumentException("");
 		}
 		
-		this.exerciseDAO.save(exercise);
+		this.exerciseRepository.save(exercise);
 	}
 	
 	public List<Exercise> getAll() {
 		
-		return this.exerciseDAO.findAll();
+		return this.exerciseRepository.findAll();
 	}
 	
 }

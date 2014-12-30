@@ -11,7 +11,7 @@ import br.com.cavy.training.management.model.PlanOwner;
 public class PlanOwnerBusinessImpl implements PlanOwnerBusiness {
 
 	@Autowired
-	private PlanOwnerRepository planOwnerDAO;
+	private PlanOwnerRepository planOwnerRepository;
 	
 	public PlanOwner findBy(String email, String password) {
 

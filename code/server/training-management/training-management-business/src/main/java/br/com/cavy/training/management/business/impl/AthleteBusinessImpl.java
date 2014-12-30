@@ -13,7 +13,7 @@ import br.com.cavy.training.management.model.Athlete;
 public class AthleteBusinessImpl implements AthleteBusiness {
 
 	@Autowired
-	private AthleteRepository athleteDAO;
+	private AthleteRepository athleteRepository;
 		
 	public Athlete findByCPF(String cpf) {
 
@@ -31,7 +31,7 @@ public class AthleteBusinessImpl implements AthleteBusiness {
 
 	public List<Athlete> getAll() {
 
-		return this.athleteDAO.findAll();
+		return this.athleteRepository.findAll();
 	}
 
 }
