@@ -3,8 +3,11 @@ package br.com.cavy.training.management.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.data.annotation.Id;
+
 public class PlanOwner {
 
+	@Id
 	private String id;
 	
 	private String name;

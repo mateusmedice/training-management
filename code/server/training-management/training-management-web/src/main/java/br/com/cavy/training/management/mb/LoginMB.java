@@ -1,21 +1,20 @@
 package br.com.cavy.training.management.mb;
 
 import java.io.Serializable;
-import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import br.com.cavy.training.management.business.AthleteBusiness;
 import br.com.cavy.training.management.business.PlanOwnerBusiness;
-import br.com.cavy.training.management.model.Athlete;
 import br.com.cavy.training.management.model.PlanOwner;
-import br.com.cavy.training.management.util.JsonUtil;
 
 @ManagedBean(name="loginMB")
 @RequestScoped
+@Component
 public class LoginMB implements Serializable {
 
 	private static final long serialVersionUID = 4488828851798122189L;
@@ -26,34 +25,32 @@ public class LoginMB implements Serializable {
 	@Autowired
 	private PlanOwnerBusiness planOwnerBusiness;
 	
-	public String loginPage() {
-
-		String userName = "";
-		String password = "";
-		
-		PlanOwner planOwner = this.planOwnerBusiness.findBy(userName, password);
-		
-		if (planOwner != null) {
-
-			planOwner.getAthleteList();
-				
-			return "login";	
+	private PlanOwner planOwner;
+	
+	public LoginMB() {
+		if (this.planOwner == null) {
+			this.planOwner = new PlanOwner();
 		}
-		
-		return "home";
 	}
 	
-	/**
-	 * Method AJAX Example 
-	 * 
-	 * @param cpf
-	 * @return
-	 */
-	public String findAthleteByName(String name) {
+	public String login() {
+
+		PlanOwner planOwner = this.planOwnerBusiness.findBy(this.planOwner.getEmail(), this.planOwner.getPassword());
 		
-		List<Athlete> athleteList = this.athleteBusiness.findByName(name);
+		if (planOwner == null) {
+
+			return "/pages/maintenance/newUser";	
+		}
 		
-		return JsonUtil.toJson(athleteList);
+		return "/pages/common/home";
+	}
+
+	public PlanOwner getPlanOwner() {
+		return planOwner;
+	}
+
+	public void setPlanOwner(PlanOwner planOwner) {
+		this.planOwner = planOwner;
 	}
 	
 }

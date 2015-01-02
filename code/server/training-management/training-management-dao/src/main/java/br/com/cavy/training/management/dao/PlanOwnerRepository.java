@@ -7,5 +7,9 @@ import br.com.cavy.training.management.model.PlanOwner;
 
 @Repository
 public interface PlanOwnerRepository extends MongoRepository<PlanOwner, String> {
+
+	PlanOwner findBy(String email);
+	
+	PlanOwner findBy(String email, String password);
 	
 }

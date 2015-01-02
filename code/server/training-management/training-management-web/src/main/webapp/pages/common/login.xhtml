@@ -1,0 +1,40 @@
+<ui:composition template="/pages/templates/defaultTemplate.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:define name="head">
+		<title><h:outputText value="Training Management - Login" ></h:outputText></title>
+	</ui:define>
+
+	<ui:define name="main">
+
+		<h:form styleClass="form-horizontal" role="form">
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-2 control-label">
+					<h:outputText value="#{msg['msg.label.email']}" />
+				</label>
+				<div class="col-sm-10">
+					<h:inputText styleClass="form-control" required="true" id="inputEmail3" value="#{loginMB.planOwner.email}"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-2 control-label">
+					<h:outputText value="#{msg['msg.label.password']}" />
+				</label>
+				<div class="col-sm-10">
+					<h:inputSecret styleClass="form-control" required="true" id="inputPassword3" value="#{loginMB.planOwner.password}" />
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<h:commandButton action="#{loginMB.login}" styleClass="btn btn-default" value="#{msg['msg.button.login']}" ></h:commandButton>
+				</div>
+			</div>
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>

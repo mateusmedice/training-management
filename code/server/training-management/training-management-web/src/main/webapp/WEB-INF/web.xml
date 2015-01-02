@@ -16,7 +16,7 @@
 	</context-param>
 
 	<welcome-file-list>
-		<welcome-file>pages/common/home.xhtml</welcome-file>
+		<welcome-file>pages/common/login.xhtml</welcome-file>
 	</welcome-file-list>
 
 	<servlet>

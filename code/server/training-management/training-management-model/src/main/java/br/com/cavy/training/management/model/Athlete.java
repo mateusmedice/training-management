@@ -2,8 +2,11 @@ package br.com.cavy.training.management.model;
 
 import java.util.Date;
 
+import org.springframework.data.annotation.Id;
+
 public class Athlete {
 
+	@Id
 	private String id;
 
 	private String name;

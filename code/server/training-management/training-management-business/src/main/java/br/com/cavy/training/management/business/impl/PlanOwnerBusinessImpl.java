@@ -15,7 +15,18 @@ public class PlanOwnerBusinessImpl implements PlanOwnerBusiness {
 	
 	public PlanOwner findBy(String email, String password) {
 
-		return null;
+		return this.planOwnerRepository.findBy(email, password);
+	}
+
+	@Override
+	public PlanOwner save(PlanOwner planOwner) {
+		
+		if (this.planOwnerRepository.findBy(planOwner.getEmail()) == null) {
+			this.planOwnerRepository.save(planOwner);	
+		}
+		
+		return this.planOwnerRepository.findBy(planOwner.getEmail(), planOwner.getPassword());
+		
 	}
 
 }

@@ -5,4 +5,6 @@ import br.com.cavy.training.management.model.PlanOwner;
 public interface PlanOwnerBusiness {
 	
 	PlanOwner findBy(String email, String password);
+
+	PlanOwner save(PlanOwner planOwner);
 }

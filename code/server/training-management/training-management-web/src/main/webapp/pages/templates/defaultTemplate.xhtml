@@ -9,68 +9,57 @@
 		
 		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
 		
-		<title>
-			Teste
-		</title>
-		
 		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 		<meta http-equiv="Pragma" content="no-cache" />
 		<meta http-equiv="Expires" content="-1" />
-
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css" />
+		
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+		
 		<ui:insert name="head" />
+		
 	</h:head>
 	
 	<h:body>
+		
+		<f:loadBundle basename="messages" var="msg"/>
 			
 		<!-- include cabecalho -->
 		<ui:include src="/pages/common/loading.xhtml" />
 		
 		<div id="geral" > 
-			
-			<table>		
+			<div class="container">
+				<div class="row clearfix">
+					<div class="col-md-12 column">
 					
-				<tr>		
-					<td>	
-						<div > 
-							<!-- include cabecalho -->
-							<ui:include src="/pages/common/header.xhtml" />
-						</div>
-					</td>
-				</tr>
-				<tr>		
-					<td>	
-						<div> 
-							<!-- include menu -->
-							<ui:include src="/pages/common/menu.xhtml" />
-						</div>
-					</td>
-				</tr>
-				
-				<tr>		
-					<td>	
+						<!-- include cabecalho -->
+						<ui:include src="/pages/common/header.xhtml" />
+
+						<br clear="all" />
+
+						<!-- include menu -->
+						<ui:include src="/pages/common/menu.xhtml" />
+
+						<br clear="all" />
+						
 						<!-- include messages -->
 						<ui:include src="/pages/common/messageBox.xhtml" />
-					</td>
-				</tr>
-				
-				<tr>		
-					<td>	
-						<div> 
-							<!-- include corpo -->
-							<ui:insert name="main" />
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<div>
-							<ui:include src="/pages/common/footer.xhtml"></ui:include>
-						</div>
-					</td>
-				</tr>
-					
-			</table>
+
+						<br clear="all" />
+						
+						<!-- include corpo -->
+						<ui:insert name="main" />
+
+						<br clear="all" />
+						
+						<!-- <ui:include src="/pages/common/footer.xhtml"></ui:include> -->
+
+					</div>
+				</div>
+			</div>
 		</div>
-		 
 	</h:body>
 </html>
