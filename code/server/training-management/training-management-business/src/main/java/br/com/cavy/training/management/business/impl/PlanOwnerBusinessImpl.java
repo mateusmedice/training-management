@@ -19,7 +19,7 @@ public class PlanOwnerBusinessImpl implements PlanOwnerBusiness {
 	}
 
 	@Override
-	public PlanOwner save(PlanOwner planOwner) {
+	public PlanOwner saveAndFind(PlanOwner planOwner) {
 		
 		if (this.planOwnerRepository.findBy(planOwner.getEmail()) == null) {
 			this.planOwnerRepository.save(planOwner);	

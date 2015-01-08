@@ -1,6 +1,5 @@
 package br.com.cavy.training.management.mb;
 
-import java.io.Serializable;
 import java.util.List;
 
 import javax.faces.bean.ManagedBean;
@@ -12,10 +11,10 @@ import org.springframework.stereotype.Component;
 import br.com.cavy.training.management.business.ExerciseBusiness;
 import br.com.cavy.training.management.model.Exercise;
 
+@Component
 @ManagedBean(name="exerciseMB")
 @SessionScoped
-@Component
-public class ExerciseMB implements Serializable {
+public class ExerciseMB extends BaseMB {
 
 	private static final long serialVersionUID = -479056843711179884L;
 
@@ -24,7 +23,7 @@ public class ExerciseMB implements Serializable {
 	
 	private List<Exercise> exerciseList;
 
-	public String save() {
+	public void save() {
 		
 		Exercise exercise = new Exercise();
 
@@ -35,7 +34,6 @@ public class ExerciseMB implements Serializable {
 		
 		this.exerciseList = this.exerciseBusiness.getAll();
 		
-		return null;
 	}
 
 	public List<Exercise> getExerciseList() {

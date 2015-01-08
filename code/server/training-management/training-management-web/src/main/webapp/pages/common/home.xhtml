@@ -11,6 +11,24 @@
 
 	<ui:define name="main">
 
+		<h:dataTable value="#{loginMB.planOwner.athleteList}" var="athlete" >
+			
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="#{msg['msg.label.table.header.codigo']}" />
+				</f:facet>
+				<h:outputText value="#{athlete.id}" />
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="#{msg['msg.label.name']}" />
+				</f:facet>
+				<h:outputText value="#{athlete.name}" />
+			</h:column>
+			
+		</h:dataTable>
+
 
 	</ui:define>
 

@@ -1,7 +1,5 @@
 package br.com.cavy.training.management.mb;
 
-import java.io.Serializable;
-
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
@@ -10,12 +8,14 @@ import org.springframework.stereotype.Component;
 
 import br.com.cavy.training.management.business.PlanOwnerBusiness;
 import br.com.cavy.training.management.model.PlanOwner;
-import br.com.cavy.training.management.util.ManagedBeanUtils;
+import br.com.cavy.training.management.util.Constantes;
 
 @Component
 @ManagedBean(name="newUserMB")
 @RequestScoped
-public class NewUserMB implements Serializable {
+public class NewUserMB extends BaseMB {
+
+	private static final long serialVersionUID = 737963118638715448L;
 
 	private PlanOwner planOwner;
 	
@@ -28,23 +28,26 @@ public class NewUserMB implements Serializable {
 		}
 	}
 	
-	public String save() {
+	public void save() {
 
-		validate();
-		
-		PlanOwner planOwner = this.planOwnerBusiness.save(this.planOwner);
-		
-		if (planOwner != null) {
-		
-			ManagedBeanUtils.setSessionParam("planOwner", planOwner);
+		if (!this.validate()) {
+			navegar(Constantes.HOME_PAGE, true);
 		}
 		
-		return "pages/common/home";
+		PlanOwner planOwner = this.planOwnerBusiness.saveAndFind(this.planOwner);
+		
+		if (planOwner != null) {
+			LoginMB loginMB = BaseMB.getBean("loginMB");
+			loginMB.setPlanOwner(planOwner);
+			loginMB.login();
+		}
+		
+		navegar(Constantes.HOME_PAGE, true);
 	}
 
-	private void validate() {
+	private boolean validate() {
 		
-		
+		return true;
 	}
 
 	public PlanOwner getPlanOwner() {

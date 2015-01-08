@@ -9,14 +9,19 @@
 		<param-name>javax.faces.PROJECT_STAGE</param-name>
 		<param-value>Development</param-value>
 	</context-param>
-	
+
 	<context-param>
 		<param-name>javax.faces.FACELETS_VIEW_MAPPINGS</param-name>
 		<param-value>*.xhtml</param-value>
 	</context-param>
+	
+	<context-param>
+		<param-name>javax.faces.DEFAULT_SUFFIX</param-name>
+		<param-value>.xhtml</param-value>
+	</context-param>
 
 	<welcome-file-list>
-		<welcome-file>pages/common/login.xhtml</welcome-file>
+		<welcome-file>pages/common/login.jsf</welcome-file>
 	</welcome-file-list>
 
 	<servlet>
@@ -24,17 +29,16 @@
 		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-	
+
 	<servlet-mapping>
 		<servlet-name>Faces Servlet</servlet-name>
-		<url-pattern>*.xhtml</url-pattern>
+		<url-pattern>*.jsf</url-pattern>
 	</servlet-mapping>
-	
-	<mime-mapping>
-		<extension>xhtml</extension>
-		<mime-type>text/html</mime-type>
-	</mime-mapping>
-	
+
+	<login-config>
+		<auth-method>BASIC</auth-method>
+	</login-config>
+
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>/WEB-INF/applicationContext.xml</param-value>
@@ -47,5 +51,5 @@
 	<listener>
 		<listener-class>com.sun.faces.config.ConfigureListener</listener-class>
 	</listener>
-
+	
 </web-app>

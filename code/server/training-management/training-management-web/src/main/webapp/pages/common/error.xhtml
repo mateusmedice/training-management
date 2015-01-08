@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+
+<ui:composition template="/pages/templates/defaultTemplate.xhtml"
+				xmlns:ui="http://java.sun.com/jsf/facelets"
+				xmlns:h="http://java.sun.com/jsf/html"
+				xmlns:f="http://java.sun.com/jsf/core">
+	
+	<ui:define name="main">
+		<f:view>
+			<h:outputText value="#{msgs['msg.erro.inesperado']}"
+						  style="font-size: 20px; font-weight:bold;" />
+
+			<br />
+			<br />
+
+			<h:outputText value="#{baseMB.exceptionDescription}"
+						  style="font-size: 13px; font-weight:bold;" />
+
+			<br />
+			<br />
+
+			<h:panelGroup rendered="#{baseMB.exceptionStackTrace != null}">
+				<fieldset>
+					<legend>#{msgs['msg.detalhes.erro']}</legend>
+					<h:outputText value="#{baseMB.exceptionStackTrace}"/>
+				</fieldset>
+			</h:panelGroup>
+			
+			<br />
+
+		</f:view>
+	</ui:define>
+</ui:composition>

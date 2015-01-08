@@ -7,6 +7,10 @@
 	<application>
 		<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
 	</application>
+	
+	<lifecycle>
+		<phase-listener>br.com.cavy.training.management.listener.LoginPhaseListener</phase-listener>
+	</lifecycle>
 
 	<application>
 		<resource-bundle>

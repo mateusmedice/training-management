@@ -6,5 +6,5 @@ public interface PlanOwnerBusiness {
 	
 	PlanOwner findBy(String email, String password);
 
-	PlanOwner save(PlanOwner planOwner);
+	PlanOwner saveAndFind(PlanOwner planOwner);
 }

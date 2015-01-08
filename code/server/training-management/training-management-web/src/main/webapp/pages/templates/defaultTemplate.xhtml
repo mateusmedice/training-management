@@ -36,27 +36,25 @@
 					<div class="col-md-12 column">
 					
 						<!-- include cabecalho -->
-						<ui:include src="/pages/common/header.xhtml" />
-
-						<br clear="all" />
+						<h:panelGroup rendered="#{not loginMB.isLoggedIn}" >
+							<ui:include src="/pages/common/header.xhtml" />
+							<br clear="all" />
+						</h:panelGroup>
 
 						<!-- include menu -->
-						<ui:include src="/pages/common/menu.xhtml" />
-
-						<br clear="all" />
+						<h:panelGroup rendered="#{loginMB.isLoggedIn}" >	
+							<ui:include src="/pages/common/menu.xhtml" />
+							<br clear="all" />
+						</h:panelGroup>
 						
 						<!-- include messages -->
 						<ui:include src="/pages/common/messageBox.xhtml" />
-
 						<br clear="all" />
 						
 						<!-- include corpo -->
 						<ui:insert name="main" />
-
 						<br clear="all" />
 						
-						<!-- <ui:include src="/pages/common/footer.xhtml"></ui:include> -->
-
 					</div>
 				</div>
 			</div>
