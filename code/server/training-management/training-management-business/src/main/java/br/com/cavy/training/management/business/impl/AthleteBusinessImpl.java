@@ -24,14 +24,20 @@ public class AthleteBusinessImpl implements AthleteBusiness {
 		return null;
 	}
 
-	public List<Athlete> findByName(String name) {
+	public Athlete findByName(String name) {
 		
-		return null;
+		return this.athleteRepository.findBy(name);
 	}
 
 	public List<Athlete> getAll() {
 
 		return this.athleteRepository.findAll();
+	}
+
+	@Override
+	public void save(Athlete athlete) {
+
+		this.athleteRepository.save(athlete);
 	}
 
 }

@@ -3,7 +3,8 @@
 	xmlns:c="http://java.sun.com/jsp/jstl/core"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:ui="http://java.sun.com/jsf/facelets">
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
 
 	<ui:define name="head">
 		<title><h:outputText value="Training Management - Login" ></h:outputText></title>
@@ -11,23 +12,31 @@
 
 	<ui:define name="main">
 
-		<h:dataTable value="#{loginMB.planOwner.athleteList}" var="athlete" >
-			
-			<h:column>
+		<p:dataTable value="#{loginMB.planOwner.athleteList}" var="athlete" 
+					 rendered="#{not empty loginMB.planOwner.athleteList}" >
+
+			<p:column>
 				<f:facet name="header">
 					<h:outputText value="#{msg['msg.label.table.header.codigo']}" />
 				</f:facet>
 				<h:outputText value="#{athlete.id}" />
-			</h:column>
+			</p:column>
 			
-			<h:column>
+			<p:column>
 				<f:facet name="header">
 					<h:outputText value="#{msg['msg.label.name']}" />
 				</f:facet>
 				<h:outputText value="#{athlete.name}" />
-			</h:column>
-			
-		</h:dataTable>
+			</p:column>
+
+			<p:column>
+				<f:facet name="header">
+					<h:outputText value="#{msg['msg.label.acoes']}" />
+				</f:facet>
+				<h:commandButton value="#{msg['msg.label.edit']}" />
+			</p:column>
+
+		</p:dataTable>
 
 
 	</ui:define>

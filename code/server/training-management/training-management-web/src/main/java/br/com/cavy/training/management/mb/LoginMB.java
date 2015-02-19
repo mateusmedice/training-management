@@ -8,7 +8,6 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import br.com.cavy.training.management.business.AthleteBusiness;
 import br.com.cavy.training.management.business.PlanOwnerBusiness;
 import br.com.cavy.training.management.model.PlanOwner;
 import br.com.cavy.training.management.util.Constantes;
@@ -20,9 +19,6 @@ public class LoginMB extends BaseMB {
 
 	private static final long serialVersionUID = 4488828851798122189L;
 
-	@Autowired
-	private AthleteBusiness athleteBusiness;
-	
 	@Autowired
 	private PlanOwnerBusiness planOwnerBusiness;
 	

@@ -8,8 +8,9 @@ public interface AthleteBusiness {
 
 	Athlete findByCPF(String cpf);
 
-	List<Athlete> findByName(String name);	
+	Athlete findByName(String name);	
 	
 	List<Athlete> getAll();	
 
+	void save(Athlete athlete);
 }
